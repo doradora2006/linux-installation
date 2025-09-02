@@ -1,0 +1,24 @@
+apt update
+apt full-upgrade -y
+apt install python3-pip
+apt install gcc
+apt install snapd
+apt install make
+apt install wordlists
+apt install gccgo-go
+apt install golang-go   
+apt --fix-broken install
+
+vs code install
+	apt install /root/Downloads/code_1.103.2-1755709794_amd64(1).deb
+to open vs code
+	code --no-sandbox --user-data-dir=/path/to/user-data
+virtual box install
+	apt install virtualbox linux-headers-generic
+	apt install virtualbox linux-ext-pack
+cyberfox install 
+	dpkg -i cyberfox.deb
+
+
+google chrome opener
+	google-chrome --no-sandbox

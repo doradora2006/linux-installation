@@ -7,6 +7,7 @@ apt install make
 apt install wordlists
 apt install gccgo-go
 apt install golang-go   
+apt install bc
 apt --fix-broken install
 
 vs code install
@@ -22,3 +23,28 @@ cyberfox install
 
 google chrome opener
 	google-chrome --no-sandbox
+	
+adapter setup
+	apt install realtek-rtl88xxau-dkms -y
+	now driver installation
+		 for kali llinux detail: cat /etc/os-release
+		 for version: uname -r
+		 for all adupter name : lsusb
+	now driver build
+		go to: http://kali.download/kali/pool/main/l/linux/
+		then find your version :
+			 wget http://kali.download/kali/pool/main/l/linux/linux-kbuild-6.12.25_6.12.25-1kali1_amd64.deb
+			wget http://kali.download/kali/pool/main/l/linux/linux-headers-6.12.25-amd64_6.12.25-1kali1_amd64.deb
+			wget http://kali.download/kali/pool/main/l/linux/linux-headers-6.12.25-common_6.12.25-1kali1_all.deb
+		then install serially
+			dpkg -i linux-headers-6.12.25-common_6.12.25-1kali1_all.deb 
+			dpkg -i linux-kbuild-6.12.25_6.12.25-1kali1_amd64.deb  
+			dpkg -i linux-headers-6.12.25-amd64_6.12.25-1kali1_amd64.deb 
+		now download driver manually which good
+			git clone https://github.com/morrownr/8821au-20210708.git
+			apt install bc
+			now go to -->8821au-20210708
+					then type sh install-driver.sh 
+					then first type n then type y
+
+			
